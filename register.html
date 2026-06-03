@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .login-header { text-align: center; margin-bottom: 30px; }
+        .login-header i { font-size: 3.5rem; color: #667eea; }
+        .login-header h1 { font-size: 1.8rem; color: #1a1a2e; margin: 10px 0 5px; }
+        .login-header p { color: #666; }
+        .form-group { position: relative; margin-bottom: 20px; }
+        .form-group i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #999; }
+        .form-group input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .form-group input:focus { outline: none; border-color: #667eea; }
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4); }
+        .error-message, .success-message { display: none; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.9rem; text-align: center; }
+        .error-message { background: #fee; color: #c00; }
+        .success-message { background: #efe; color: #080; }
+        .error-message.show, .success-message.show { display: block; }
+        .switch-auth { text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #666; }
+        .switch-auth a { color: #667eea; font-weight: 600; text-decoration: none; }
+        .terms-check { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 15px; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <i class="fas fa-user-plus"></i>
+            <h1>Create Account</h1>
+            <p>Join us today</p>
+        </div>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="regUsername" placeholder="Username" required>
+            </div>
+            
+            <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="regEmail" placeholder="Email Address" required>
+            </div>
+            
+            <div class="form-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="regPassword" placeholder="Password" required>
+            </div>
+            
+            <div class="form-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+            </div>
+            
+            <label class="terms-check">
+                <input type="checkbox" id="agreeTerms" required>
+                <span>I agree to the Terms & Privacy</span>
+            </label>
+            
+            <button type="submit" class="login-btn">
+                <i class="fas fa-user-plus"></i> Create Account
+            </button>
+            
+            <div class="error-message" id="registerError">Error message here</div>
+            <div class="success-message" id="registerSuccess">Account created! Redirecting...</div>
+        </form>
+        
+        <div class="switch-auth">
+            Already have an account? <a href="index.html">Sign in</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

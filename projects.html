@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f4f4f4; }
+        
+        .navbar { display: flex; justify-content: space-between; padding: 1rem 2rem; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .navbar .logo { font-size: 1.5rem; font-weight: bold; color: #667eea; }
+        .navbar ul { display: flex; list-style: none; gap: 2rem; }
+        .navbar a { text-decoration: none; color: #333; font-weight: 500; }
+        .navbar a:hover { color: #667eea; }
+        
+        .page-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 2rem; text-align: center; color: white; }
+        .page-header h1 { font-size: 3rem; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        .projects-section { padding: 5rem 0; }
+        .projects-section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
+        
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        
+        .project-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+        .project-card img { width: 100%; height: 200px; object-fit: cover; }
+        .project-info { padding: 1.5rem; }
+        .project-info h3 { margin-bottom: 0.5rem; }
+        .project-info p { color: #666; margin-bottom: 1rem; }
+        
+        .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .project-tags span { padding: 0.3rem 0.8rem; background: #f4f4f4; border-radius: 20px; font-size: 0.8rem; color: #667eea; font-weight: 600; }
+        
+        footer { background: #333; color: white; padding: 3rem 0; text-align: center; }
+        
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; text-align: center; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul>
+            <li><a href="main-site.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" style="color: #667eea;">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-header">
+        <h1>My Projects</h1>
+    </section>
+
+    <section class="projects-section">
+        <div class="container">
+            <h2>Check Out My Work</h2>
+            
+            <div class="projects-grid">
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 1">
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>A full-featured online store with shopping cart and payment integration.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website showcasing my work and skills.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Task Manager App</h3>
+                        <p>A task management application with drag and drop functionality.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 4">
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>A weather forecasting app that shows current weather conditions.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 5">
+                    <div class="project-info">
+                        <h3>Blog Website</h3>
+                        <p>A content management system for publishing blog posts.</p>
+                        <div class="project-tags">
+                            <span>WordPress</span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 6">
+                    <div class="project-info">
+                        <h3>Chat Application</h3>
+                        <p>Real-time chat application with multiple users support.</p>
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>Socket.io</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 7 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 7">
+                    <div class="project-info">
+                        <h3>Quiz Application</h3>
+                        <p>An interactive quiz app with scoring and leaderboards.</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 8 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 8">
+                    <div class="project-info">
+                        <h3>Finance Tracker</h3>
+                        <p>A personal finance tracking application with charts.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>D3.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 9 -->
+                <div class="project-card">
+                    <img src="images/jorie.png" alt="Project 9">
+                    <div class="project-info">
+                        <h3>Booking System</h3>
+                        <p>A hotel booking system with availability calendar.</p>
+                        <div class="project-tags">
+                            <span>MERN</span>
+                            <span>Stripe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

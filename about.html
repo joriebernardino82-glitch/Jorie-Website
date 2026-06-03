@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f4f4f4; }
+        .navbar { display: flex; justify-content: space-between; padding: 1rem 2rem; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar .logo { font-size: 1.5rem; font-weight: bold; color: #667eea; }
+        .navbar ul { display: flex; list-style: none; gap: 2rem; }
+        .navbar a { text-decoration: none; color: #333; font-weight: 500; }
+        .page-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 5rem 2rem; text-align: center; color: white; }
+        .page-header h1 { font-size: 3rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .about-content { padding: 5rem 0; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .about-image img { width: 100%; border-radius: 10px; }
+        .about-text h2 { font-size: 2rem; margin-bottom: 1rem; color: #333; }
+        .about-text h3 { font-size: 1.5rem; margin: 1.5rem 0 1rem; color: #333; }
+        .about-text p { color: #666; margin-bottom: 1rem; }
+        .skills-container { margin-top: 1.5rem; }
+        .skill { margin-bottom: 1.5rem; }
+        .skill span { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+        .progress-bar { height: 10px; background: #e0e0e0; border-radius: 50px; overflow: hidden; }
+        .progress { height: 100%; background: linear-gradient(90deg, #667eea, #5dade2); border-radius: 50px; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; color: white; font-size: 0.8rem; font-weight: 600; }
+        footer { background: #333; color: white; padding: 3rem 0; text-align: center; }
+        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul>
+            <li><a href="main-site.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-header">
+        <h1>About Me</h1>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/jorie.png" alt="My Photo">
+                </div>
+                <div class="about-text">
+                    <h2>Who I Am</h2>
+                    <p>Hi! I'm a passionate web developer and designer based in the Philippines. I love creating beautiful and functional websites.</p>
+                    
+                    <h3>My Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill">
+                            <span>HTML/CSS</span>
+                            <div class="progress-bar"><div class="progress" style="width: 90%">90%</div></div>
+                        </div>
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <div class="progress-bar"><div class="progress" style="width: 85%">85%</div></div>
+                        </div>
+                        <div class="skill">
+                            <span>React</span>
+                            <div class="progress-bar"><div class="progress" style="width: 80%">80%</div></div>
+                        </div>
+                        <div class="skill">
+                            <span>Python</span>
+                            <div class="progress-bar"><div class="progress" style="width: 75%">75%</div></div>
+                        </div>
+                    </div>
+
+                    <h3>My Journey</h3>
+                    <p>I started coding in 2020 and have been learning and growing ever since.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
